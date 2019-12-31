@@ -38,6 +38,7 @@ public class WebSecurity extends WebSecurityConfigurerAdapter {
                 .authenticationEntryPoint(unauthorizedHandler).and().authorizeRequests()
                 .antMatchers("/api/auth/*").permitAll().anyRequest()
                 .authenticated();
+        http.cors();
         http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
     }
 

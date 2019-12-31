@@ -1,12 +1,9 @@
 package com.poc.storyed.feed;
 
-import com.google.common.collect.Lists;
-import com.poc.storyed.Entities.StoryEntity;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.List;
 
 

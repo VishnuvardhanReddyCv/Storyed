@@ -42,7 +42,6 @@ public class UserDAOImpl implements UserDAO {
     @Override
     public UserEntity getUserByEmail(String email) throws UserNotFoundException {
         UserEntity user =  userRepository.getUserByEmail(email);
-        System.out.println(user);
         if(user == null)
             throw new UserNotFoundException();
         return user;

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="36e3d238-a600-46fc-8c9a-968c1af2d5ae" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../storyed1/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/Entities/StoryEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/Repositories/AuthorRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/Repositories/StoriesRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/StoryedApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/author/AuthorController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/AuthorDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/StoryController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/StoryDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/StoryDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/StoryDTO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/StoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/StoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/feed/StoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserAlreadyFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserDAOImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserDetailsService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/users/UserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/utils/CommonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/utils/Mapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/AuthenticationController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/AuthenticationFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/JWT/JWTTokenUtil.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/JWTAuthenticationEntryPoint.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/LoginRequest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/LoginResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/LoginServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/StoryedUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/java/com/poc/storyed/websecurity/WebSecurity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/main/resources/application.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../storyed1/src/test/java/com/poc/storyed/StoryedApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-end/storyed/src/Components/Pages/LoginPage/LoginPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-end/storyed/src/Components/Pages/LoginPage/LoginPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-end/storyed/src/Global/RootRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-end/storyed/src/Global/RootRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Front-end/storyed/src/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Front-end/storyed/src/api.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/MavenWrapperDownloader.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/Entities/StoryEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/Repositories/AuthorRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/Repositories/StoriesRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/StoryedApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/author/AuthorController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/AuthorDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/StoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/StoryDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/StoryDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/StoryDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/StoryRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/StoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/feed/StoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserAlreadyFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserDAO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserDAOImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserDetailsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/users/UserRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/utils/CommonUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/utils/Mapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/AuthenticationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/AuthenticationFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/JWT/JWTTokenUtil.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/LoginResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/LoginServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/StoryedUser.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/poc/storyed/websecurity/WebSecurity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/poc/storyed/StoryedApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1VHNHAUQWXilVmKB36jEFyw7QmX" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.31625" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="36e3d238-a600-46fc-8c9a-968c1af2d5ae" name="Default Changelist" comment="" />
+      <created>1576905969701</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1576905969701</updated>
+      <workItem from="1576906220402" duration="331000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1045" y="104" width="847" height="677" key="#Project_Structure" timestamp="1576908064081">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="1045" y="104" width="847" height="677" key="#Project_Structure/61.27.1859.1053@61.27.1859.1053" timestamp="1576908064081" />
+    <state x="448" y="210" width="1084" height="785" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1576906267185">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="448" y="210" width="1084" height="785" key="#com.intellij.execution.impl.EditConfigurationsDialog/61.27.1859.1053@61.27.1859.1053" timestamp="1576906267185" />
+    <state x="698" y="222" width="575" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1576907537672">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="698" y="222" width="575" height="661" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/61.27.1859.1053@61.27.1859.1053" timestamp="1576907537672" />
+    <state x="831" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog" timestamp="1576907483086">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="831" y="444" width="308" height="216" key="#com.intellij.ide.util.projectWizard.JdkChooserPanel.MyDialog/61.27.1859.1053@61.27.1859.1053" timestamp="1576907483086" />
+    <state x="568" y="210" width="824" height="684" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor" timestamp="1576907482563">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="568" y="210" width="824" height="684" key="#com.intellij.openapi.projectRoots.ui.ProjectJdksEditor/61.27.1859.1053@61.27.1859.1053" timestamp="1576907482563" />
+    <state x="725" y="421" width="520" height="263" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1576907517601">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="725" y="421" width="520" height="263" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/61.27.1859.1053@61.27.1859.1053" timestamp="1576907517601" />
+    <state x="768" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1576908062730">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="768" y="310" width="424" height="484" key="FileChooserDialogImpl/61.27.1859.1053@61.27.1859.1053" timestamp="1576908062730" />
+    <state x="479" y="187" key="SettingsEditor" timestamp="1576906976607">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="479" y="187" key="SettingsEditor/61.27.1859.1053@61.27.1859.1053" timestamp="1576906976607" />
+    <state x="646" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1576908077240">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="646" y="380" key="com.intellij.ide.util.TipDialog/61.27.1859.1053@61.27.1859.1053" timestamp="1576908077240" />
+    <state x="325" y="108" width="1372" height="796" key="new project wizard" timestamp="1576908115550">
+      <screen x="61" y="27" width="1859" height="1053" />
+    </state>
+    <state x="325" y="108" width="1372" height="796" key="new project wizard/61.27.1859.1053@61.27.1859.1053" timestamp="1576908115550" />
+  </component>
+</project>

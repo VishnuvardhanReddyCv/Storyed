@@ -14,6 +14,8 @@ import java.util.Date;
 @Component
 public class JWTTokenUtil {
 
+    public static String currenUserUsername= "";
+
     private static final Logger logger = LoggerFactory.getLogger(JWTTokenUtil.class);
 
     private static final String jwtSecret = "storyedKey";
@@ -40,7 +42,9 @@ public class JWTTokenUtil {
                 .parseClaimsJws(token)
                 .getBody();
 
-        return claims.getSubject();
+        String username = claims.getSubject();
+        JWTTokenUtil.currenUserUsername = username;
+        return username;
     }
 
     public boolean validateToken(String authToken) { ;

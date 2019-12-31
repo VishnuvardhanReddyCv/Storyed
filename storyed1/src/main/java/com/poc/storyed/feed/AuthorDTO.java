@@ -1,12 +1,30 @@
 package com.poc.storyed.feed;
 
+import com.poc.storyed.users.UserEntity;
+
 public class AuthorDTO {
 
     private long id;
     private String firstName;
     private String lastName;
     private String description;
-    private String imageUrl;
+
+    public AuthorDTO() {
+    }
+
+    public AuthorDTO(UserEntity user) {
+        this.id = user.getId();
+        this.firstName = user.getFirstName();
+        this.lastName = user.getLastName();
+        this.description = user.getDescription();
+    }
+
+    public AuthorDTO(long id, String firstName, String lastName, String description, String imageUrl) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.description = description;
+    }
 
     public long getId() {
         return id;
@@ -39,14 +57,5 @@ public class AuthorDTO {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public String getImageUrl() {
-        return imageUrl;
-    }
-
-    public void setImageUrl(String imageUrl) {
-        this.imageUrl = imageUrl;
-    }
-
 
 }

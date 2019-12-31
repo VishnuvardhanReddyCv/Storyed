@@ -1,7 +1,7 @@
 package com.poc.storyed.feed;
 
 import com.google.common.collect.Lists;
-import com.poc.storyed.Entities.StoryEntity;
+import com.poc.storyed.utils.Mapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -20,7 +20,7 @@ public class StoryDAOImpl implements StoryDAO {
     public List<StoryDTO> getStories() {
         List<StoryDTO> stories = new ArrayList<>();
         List<StoryEntity> storiesMap = Lists.newArrayList(storyRepository.findAll());
-        modelMapper.map(stories,storiesMap);
+        storiesMap.forEach(storyEntity -> stories.add(Mapper.transformStoryEntityToStoryDTO(storyEntity)));
         return stories;
     }
 
