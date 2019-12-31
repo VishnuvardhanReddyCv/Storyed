@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Button, Row } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import styled from "styled-components";
@@ -31,6 +31,7 @@ export default function Editor(props) {
           value={props.value}
           onChange={props.onEditorContentChange}
           placeholder = {props.placeholder}
+          value = {props.content}
         />
       </EditorWrapper>
       <SubmitWrapper>

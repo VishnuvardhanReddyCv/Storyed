@@ -1,20 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
-import App from "./App";
 import "bootstrap/dist/css/bootstrap.min.css";
 import * as serviceWorker from "./serviceWorker";
-import Header from "./Components/Header/Header";
-import LoginPage from "./Components/Pages/LoginPage/LoginPage";
-import EditorPage from "./Components/Pages/EditorPage/EditorPage";
 import {Provider} from 'react-redux';
-import { createStore } from 'redux';
-import {storyEditor} from './Components/Pages/EditorPage/Editor.reducer';
 import RootRoutes from "./Global/RootRoutes";
+import { store } from "./Redux/store";
 
 
 ReactDOM.render(
-  <Provider store ={createStore(storyEditor)}>
+  <Provider store ={store}>
     <RootRoutes />
   </Provider>,
   document.getElementById("root")

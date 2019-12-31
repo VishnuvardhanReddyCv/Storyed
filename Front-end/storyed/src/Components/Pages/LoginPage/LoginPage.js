@@ -15,6 +15,11 @@ import {
   isValidPassword,
   isValidName
 } from "../../../Utils/CommonUtils";
+import { userLogin } from "./LoginService";
+import { connect } from "react-redux";
+import { getLoginFailedAction, getUpdateUserAction, getLoginSuccessAction } from "./LoginPage.actions";
+import { setToken } from "../../../Utils/TokenService";
+import {getData} from '../../../api';
 
 const FormWrapper = styled.div`
   background: #fff;
@@ -55,7 +60,7 @@ const VerticalLine = styled.div`
   margin: 5px;
 `;
 
-export default class LoginPage extends React.Component {
+class LoginPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -135,7 +140,24 @@ export default class LoginPage extends React.Component {
     this.setState(newState);
   }
 
-  onLogin() {}
+  async onLogin(event) {
+    debugger;
+    event.preventDefault();
+    let response = await userLogin(this.state.loginDetails)
+      if(response.status === 403){
+        this.props.onLoginFailed();
+        alert('loginFailed');
+      }else if(response.status === 200){
+        let data = await response.json();
+        setToken(data.token);
+        let userResponse = await getData('/users/getCurrentUser');
+        if(userResponse.ok){
+          let user = await userResponse.json();
+          this.props.updateCurrentUser(user);
+        }
+        this.props.history.push('/new-story');
+      }
+  }
 
   onSignup() {}
 
@@ -329,3 +351,21 @@ export default class LoginPage extends React.Component {
     );
   }
 }
+
+
+const mapStateToProps = (state) => {
+  return {
+    currentUser : state.app.currentUser,
+    loginStatus : state.app.loginStatus
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onLoginFailed : () => {dispatch(getLoginFailedAction())},
+    onLoginSuccess : () => {dispatch(getLoginSuccessAction())},
+    updateCurrentUser : (user) => {dispatch(getUpdateUserAction(user))}
+  };
+}
+
+export default connect(mapStateToProps,mapDispatchToProps)(LoginPage);

@@ -6,7 +6,7 @@ const initialState = {
 };
 
 export const storyEditor = (state = initialState, action) => {
-  let newState;
+  let newState = state;
   switch (action.type) {
     case "UPDATE_STORY_DRAFT_CONTENT":
       newState = update(state, {
@@ -17,6 +17,8 @@ export const storyEditor = (state = initialState, action) => {
       newState = update(state, {
         title: { $set: action.title }
       });
+      return newState;
+    default:
       return newState;
   }
 };

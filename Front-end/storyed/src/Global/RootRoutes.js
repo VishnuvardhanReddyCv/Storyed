@@ -12,7 +12,7 @@ export default function RootRoutes() {
   return (
     <Router>
       <RouteWrapper>
-        <Route path={"/login"} component={LoginPage} />
+        <Route exact path={"/"} component={LoginPage} />
         {/* <Route path={"/profile"} component={ProfilePage} /> */}
         {/* <Route path={"/story/:storyId"} component={StoryPage} /> */}
         <Route path={"/new-story"} component={EditorPage} />

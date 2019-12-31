@@ -33,8 +33,17 @@ class EditorPage extends React.Component {
     this.saveStory = this.saveStory.bind(this);
   }
 
-  saveStory(content) {
-    postStory(selectStory());
+  saveStory() {
+    let story = {
+      author : this.props.currentUser,...this.props.story
+    }
+    debugger;
+    postStory(story);
+  }
+
+  onTitleChange = (event) => {
+    const title = event.target.value;
+    this.props.onStoryTitleChange(title);
   }
 
   render() {
@@ -45,10 +54,12 @@ class EditorPage extends React.Component {
             <TitleWrapper>
               <Container>
                 <Form.Group>
-                  <Form.Label><strong>Title</strong></Form.Label>
+    <Form.Label><strong>Title</strong></Form.Label>
                   <Form.Control
                     type="text"
                     placeholder="Add appropriate title for your story..."
+                    value = {this.props.story.title}
+                    onChange = {this.onTitleChange}
                   />
                 </Form.Group>
               </Container>
@@ -61,6 +72,7 @@ class EditorPage extends React.Component {
                   onEditorContentChange={this.props.onEditorContentChange}
                   placeholder = "Write your story here..."
                   submitText = "Save"
+                  content = {this.props.story.content}
                 ></Editor>
             </EditorWrapper>
           </ContainerWrapper>
@@ -77,4 +89,4 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect(() => {}, mapDispatchToProps)(EditorPage);
+export default connect((state) => {return({ currentUser : state.app.currentUser,story : state.editor})}, mapDispatchToProps)(EditorPage);

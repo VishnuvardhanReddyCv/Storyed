@@ -1,7 +1,7 @@
 import React from "react";
 import Header from "../Header/Header";
 import styled from "styled-components";
-import { Container } from "react-bootstrap";
+import HiddenComponets from "../HiddenComponents/HiddenComponents";
 
 const Wrapper = styled.div`
   height: 100%;
@@ -26,6 +26,7 @@ export default class Master extends React.Component {
           <Header />
         </HeaderWrapper>
         <ChildrenWrapper>{this.props.children}</ChildrenWrapper>
+        <HiddenComponets />
       </Wrapper>
     );
   }
