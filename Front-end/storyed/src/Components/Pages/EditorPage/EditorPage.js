@@ -7,20 +7,15 @@ import {
   getTitleChangeAction
 } from "../EditorPage/EditorActions";
 import { postStory } from "./Editor.service";
-import { selectStory } from "./Editor.selectors";
 import { connect } from "react-redux";
 import styled from "styled-components";
 
 const EditorPageWrapper = styled.div`
-  height: 100%;
+    height : 100%;
 `;
 
 const EditorWrapper = styled(Row)`
   height: 80%;
-`;
-
-const ContainerWrapper = styled(Container)`
-  height: 100%;
 `;
 
 const TitleWrapper = styled(Row)`
@@ -48,9 +43,8 @@ class EditorPage extends React.Component {
 
   render() {
     return (
-      <EditorPageWrapper>
         <Master>
-          <ContainerWrapper>
+          <EditorPageWrapper>
             <TitleWrapper>
               <Container>
                 <Form.Group>
@@ -75,9 +69,8 @@ class EditorPage extends React.Component {
                   content = {this.props.story.content}
                 ></Editor>
             </EditorWrapper>
-          </ContainerWrapper>
+          </EditorPageWrapper>
         </Master>
-      </EditorPageWrapper>
     );
   }
 }
@@ -89,4 +82,6 @@ const mapDispatchToProps = dispatch => {
   };
 };
 
-export default connect((state) => {return({ currentUser : state.app.currentUser,story : state.editor})}, mapDispatchToProps)(EditorPage);
+const mapStateToProps = (state) => {return({ currentUser : state.app.currentUser,story : state.editor})};
+
+export default connect(mapStateToProps, mapDispatchToProps)(EditorPage);

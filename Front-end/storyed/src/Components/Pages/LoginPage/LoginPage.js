@@ -154,8 +154,9 @@ class LoginPage extends React.Component {
         if(userResponse.ok){
           let user = await userResponse.json();
           this.props.updateCurrentUser(user);
+          this.props.onLoginSuccess();
         }
-        this.props.history.push('/new-story');
+        this.props.history.push('/feed');
       }
   }
 

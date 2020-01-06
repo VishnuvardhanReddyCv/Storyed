@@ -2,18 +2,20 @@ import React from "react";
 import styled from "styled-components";
 import { NavDropdown, Nav, Navbar, Form, FormControl } from "react-bootstrap";
 import { getImage } from "../../Utils/CommonUtils";
+import { connect } from "react-redux";
+import { LinkContainer } from "react-router-bootstrap";
 
 const HeaderWrapper = styled.div`
   .navbar {
     margin-bottom: 0;
   }
-  display : flex;
+  display: flex;
   postion: fixed;
   padding-left: 20%;
 `;
 
 const RightFloatWrapper = styled.div`
-margin-left:200px;
+  margin-left: 200px;
 `;
 
 const Logout = styled(NavDropdown.Item)`
@@ -59,21 +61,15 @@ const Search = styled(FormControl)`
   width: 100rem;
 `;
 
-const Wrapper =styled.div`
-display : flex;
-align-items : center;
-height : 100%;
-`
+const Wrapper = styled.div`
+  display: flex;
+  align-items: center;
+  height: 100%;
+`;
 
-export default class Header extends React.Component {
+class Header extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      isLoggedIn: true,
-      user: {
-        name: "Vishnu"
-      }
-    };
     this.renderUserInfo = this.renderUserInfo.bind(this);
     this.onLogout = this.onLogout.bind(this);
   }
@@ -83,17 +79,15 @@ export default class Header extends React.Component {
   }
 
   renderUserInfo() {
-    if (this.state.isLoggedIn) {
+    if (this.props.isLoggedIn) {
       return (
         <NavDropdown
-          title={this.state.user.name}
+          title={this.props.user.firstName}
           className="float-right"
           id="Profile"
         >
           <NavDropdown.Item href="/profile">Profile</NavDropdown.Item>
-          <Logout onClick={this.onLogout} href="/">
-            Log out
-          </Logout>
+            <Logout onClick={this.onLogout} href="/login">Log out</Logout>
         </NavDropdown>
       );
     }
@@ -105,23 +99,28 @@ export default class Header extends React.Component {
       <Wrapper>
         <HeaderWrapper>
           <NavbarWrapper collapseOnSelect>
-            <Navbar.Brand href="/">
-              <Logo src={getImage("storyed_logo.png")}></Logo>
-            </Navbar.Brand>
+            <LinkContainer to="/">
+              <Navbar.Brand>
+                <Logo src={getImage("storyed_logo.png")}></Logo>
+              </Navbar.Brand>
+            </LinkContainer>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="mr-auto">
-                <NavItemWrapper href="/Feed">Feed</NavItemWrapper>
-                <NavItemWrapper styles="display : flex;">
-                  Notifications{" "}
-                  <NotificationBadge className="badge badge-pill badge-light">
-                    {" "}
-                    4
-                  </NotificationBadge>
-                </NavItemWrapper>
-
-                <NavItemButtonWrapper href="/new-story">
-                  Add Story
-                </NavItemButtonWrapper>
+                <LinkContainer to="/Feed">
+                  <NavItemWrapper>Feed</NavItemWrapper>
+                </LinkContainer>
+                <LinkContainer to="/notifications">
+                  <NavItemWrapper styles="display : flex;">
+                    Notifications{" "}
+                    <NotificationBadge className="badge badge-pill badge-light">
+                      {" "}
+                      4
+                    </NotificationBadge>
+                  </NavItemWrapper>
+                </LinkContainer>
+                <LinkContainer to="/new-story">
+                  <NavItemButtonWrapper>Add Story</NavItemButtonWrapper>
+                </LinkContainer>
                 <Form inline>
                   <Search
                     type="text"
@@ -130,15 +129,24 @@ export default class Header extends React.Component {
                   />
                 </Form>
               </Nav>
-              <RightFloatWrapper>
-                {this.renderUserInfo()}
-              </RightFloatWrapper>
+              <RightFloatWrapper>{this.renderUserInfo()}</RightFloatWrapper>
             </Navbar.Collapse>
           </NavbarWrapper>
         </HeaderWrapper>
-        </Wrapper>
+      </Wrapper>
     );
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    isLoggedIn: state.app.isLoggedIn,
+    user: state.app.currentUser
+  };
+};
 
+const mapDispatchToProps = dispatch => {
+  return {};
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Header);

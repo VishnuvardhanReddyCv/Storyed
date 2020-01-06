@@ -1,10 +1,7 @@
 export function getLoginFailedAction(){
     return {
         type : 'LOGIN_FAILED',
-        data : {
-            status : 'FAILED',
-            isLoggedIn : false
-        }
+        status : 'FAILED'
     };
 }
 
@@ -12,10 +9,7 @@ export function getLoginFailedAction(){
 export function getLoginSuccessAction(){
     return {
         type : 'LOGIN_SUCCESS',
-        data : {
-            status : 'SUCCESS',
-            isLoggedIn : true
-        }
+        status : 'SUCCESS'
     };
 }
 
